@@ -1,0 +1,97 @@
+/* styles.css */
+
+
+button.accordion-button {
+  background-color: #eb6624;
+  color: #faf5f2;
+  box-shadow: none;
+}
+
+.custom-btn {
+  background-color: black;
+  border-color: black;
+}
+
+.carousel-controls {
+  position: relative;
+  margin-top: -40px; 
+}
+
+
+.carousel-control-prev {
+  left: -10%;  /* Adjust this value */
+}
+
+.carousel-control-next {
+  right: -10%;  /* Adjust this value */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(99, 98, 98);
+}
+
+
+.col-md-2 {
+  font-size: 14px; /* or any other font size you prefer */
+}
+
+.feedback_address {
+  font-size: 14px; /* or any other font size you prefer */
+}
+
+
+.news-list a {
+  color: inherit; /* Use the default color */
+  text-decoration: none; /* Remove underline */
+}
+
+.news-list li {
+  margin-bottom: 20px; /* Add spacing between list items */
+}
+
+.banner {
+  text-align: center; /* Center the banner horizontally */
+  margin-bottom: 20px; /* Add some spacing between the banner and main content */
+}
+
+.banner img {
+  max-width: 100%; /* Adjust the image size as needed */
+}
+
+
+.card-text,
+.list-group-item {
+  font-size: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.card-body:not(:last-child) {
+  margin-bottom: 0;
+}
+
+
+ul li {
+  font-size: 14px;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-bottom: 50px; /* Adjust the value as per your desired spacing */
+}
+

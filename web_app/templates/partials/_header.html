@@ -1,0 +1,64 @@
+{% load static %}
+<header>
+  {% comment %} <img src="{% static 'img/logo.png' %}" /> {% endcomment %}
+</header>
+
+
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" style="height: 80px;">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-end align-items-center">
+      <a class="navbar-brand mb-0 h1 me-auto" href="{% url 'home' %}">
+        <img src="{% static 'img/logo_main.png' %}" alt="Logo" width="185" height="50" class="d-inline-block align-text-top ms-4">
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'services' %}">Услуги</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Отрасли</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Разработка информационных систем</a></li>
+            <li><a class="dropdown-item" href="#">Макроэкономические исследования</a></li>
+            <li><a class="dropdown-item" href="#">Микроэкономические исследования</a></li>
+            <li><a class="dropdown-item" href="#">Отраслевые исследования</a></li>
+            <li><a class="dropdown-item" href="#">Исследования в области нормирования факторов производства</a></li>
+            <li><a class="dropdown-item" href="#">Исследования социальных проблем</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'sector' %}">Подробнее...</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Проекты</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">За 2023 год</a></li>
+            <li><a class="dropdown-item" href="#">За 2022 год</a></li>
+            <li><a class="dropdown-item" href="#">За 2021 год</a></li>
+            <li><a class="dropdown-item" href="#">За 2020 год</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'portfolio' %}">Подробнее</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+        </li>
+        <li class="nav-item me-2">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

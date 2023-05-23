@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container">
+    <div id="work_area" style="width: 60%; margin: 0 auto;">
+  
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+
+      <br>
+      <h4 class="pb-4 mb-4 text-center">Оставьте ваши контакты, мы с вами свяжемся</h4>
+
+      <form class="row g-3" method="POST">
+        {% csrf_token %}
+        <div class="col-md-6">
+            <label for="inputName4" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="inputName4" name="name"  placeholder="Нурсултан" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputSurname4" class="form-label">Фамилия</label>
+            <input type="text" class="form-control" id="inputSurname4" name="surname" placeholder="Нурсултанов">
+        </div>
+        <div class="col-12">
+            <label for="inputPhone" class="form-label">Номер телефона</label>
+            <input type="text" class="form-control" id="inputPhone" name="phone_number" placeholder="8-777-001-0101">
+        </div>
+        <div class="col-12">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="address@gmail.com" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputTopic" class="form-label">Тема</label>
+            <input type="text" class="form-control" id="inputTopic" name="topic">
+        </div>
+        <div class="col-12">
+            <label for="inputText" class="form-label">Текст</label>
+            <textarea class="form-control" id="inputText" name="text" style="resize: both;" required></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+      </form>
+
+      {% comment %} {% if form.errors %}
+      <div class="alert alert-danger mt-4">
+        {% for field in form %}
+          {% if field.errors %}
+            <ul class="m-0">
+              {% for error in field.errors %}
+                <li>{{ error|safe }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %} {% endcomment %}
+
+
+    </div>
+</section>
+
+  {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div id="work_area" style="width: 60%; margin: 0 auto;">
+    <div class="alert alert-success mt-5" role="alert">
+        Спасибо! Наши сотрудники свяжутся с вами в ближайшее время
+    </div>
+    <a class="btn btn-primary" href="{% url 'home' %}">На главную</a>
+</div>
+
+{% endblock %}

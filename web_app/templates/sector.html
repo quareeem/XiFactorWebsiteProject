@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="container">
+  <div id="work_area">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Отрасли</li>
+      </ol>
+    </nav>
+
+    <div class="row row-cols-1 row-cols-md-2 g-8">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Разработка и внедрение автоматизированных информационных систем</h5>
+                <ul class="list-group list-group-flush flex-grow-1">
+                  <li class="list-group-item">Разработка систем производственного учета затрат и методики расчета себестоимости производства товаров и оказания услуг, в том числе транспортных услуг</li>
+                  <li class="list-group-item">Решение и автоматизация финансово-экономических и статистических задач</li>
+                  <li class="list-group-item">Разработка технических заданий на создание или развитие информационных систем; Решение задач мониторинга и анализа состояния сложных организационных систем</li>
+                </ul>
+                
+              </div>
+            </div>
+            <div class="col-md-3 d-lg-block d-md-none text-center" style="display: flex; align-items: center; border-left: 1px solid #d2d2d2;">
+              <img width="80" height="80" src="https://img.icons8.com/sf-ultralight/100/line-chart--v2.png" class="img-fluid rounded-start" alt="line-chart--v4" style="margin-top: 30px;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-3 d-lg-block d-md-none text-center" style="display: flex; align-items: center; border-right: 1px solid #d2d2d2;">
+              <img width="80" height="80" src="https://img.icons8.com/sf-ultralight/100/combo-chart--v6.png"" class="img-fluid rounded-start" alt="combo-chart--v6" style="margin-top: 30px;"/>
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Макроэкономические исследования</h5>
+                <p class="card-text">Нашей компанией предлагается широкий спектр профессиональных услуг по макроэкономическому исследованию, включая тщательный мониторинг, всесторонний анализ, надежную оценку и точные прогнозы важнейших экономических показателей, в том числе безработицы, инфляции, роста экономики и развития регионов. Мы также проводим качественную оценку эффективности мероприятий, реализуемых в рамках государственных и межгосударственных программ, с целью помочь нашим клиентам принимать основанные на фактах решения и оптимизировать их стратегии. С нами ваша компания получит полный спектр макроэкономического исследования и надежного партнера, готового поддержать вас в достижении ваших целей и обеспечить успех на рынке.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Отраслевые исследования</h5>
+                <p class="card-text">Мониторинг, анализ, оценка и прогнозирование вопросов развития железнодорожного транспорта, добывающей отрасли, охрана окружающей среды. Оценка эффективности мероприятий на уровне отраслевых программ</p>
+              </div>
+            </div>
+            <div class="col-md-3 d-lg-block d-md-none text-center" style="display: flex; align-items: center; border-left: 1px solid #d2d2d2;">
+              <img width="80" height="80" src="https://img.icons8.com/sf-ultralight/100/doughnut-chart--v4.png" class="img-fluid rounded-start" alt="doughnut-chart--v4" style="margin-top: 30px;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-3 d-lg-block d-md-none text-center" style="display: flex; align-items: center; border-right: 1px solid #d2d2d2;">
+              <img width="80" height="80" src="https://img.icons8.com/sf-ultralight/100/area-chart--v4.png" class="img-fluid rounded-start" alt="area-chart--v4" style="margin-top: 30px;"/>
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Микроэкономические исследования</h5>
+                <p class="card-text">Моделирование производственных процессов, оценка экономических эффектов, мониторинг, анализ, оценка и прогнозирование себестоимости и тарифов. Оценка эффективности мероприятий на уровне бизнес-проекта. </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Исследования в области нормирования факторов производства</h5>
+                <p class="card-text">Нормирование времени работ, численности работников, машин и оборудования, технических потерь, расходов материалов. </p>
+              </div>
+            </div>
+            <div class="col-md-3 d-lg-block d-md-none text-center" style="display: flex; align-items: center; border-left: 1px solid #d2d2d2;">
+              <img width="80" height="80" src="https://img.icons8.com/sf-ultralight/100/organization.png" class="img-fluid rounded-start" alt="organisation-v1" style="margin-top: 30px;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-3 d-lg-block d-md-none text-center" style="display: flex; align-items: center; border-right: 1px solid #d2d2d2;">
+              <img width="80" height="80" src="https://img.icons8.com/sf-ultralight/100/collaboration.png" class="img-fluid rounded-start" alt="collab--v4" style="margin-top: 30px;"/>
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Исследования социальных проблем</h5>
+                <p class="card-text">Мониторинг, анализ, оценка и прогнозирование вопросов социальной напряженности, религиозного экстремизма. Оценка эффективности мероприятий на уровне государственных и межгосударственных программ.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    хай SECTOR - OTRASLI
+
+  </div>
+</section>
+
+
+{% endblock %}

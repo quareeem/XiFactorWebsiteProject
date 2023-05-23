@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- s.html -->
+<section class="container">
+  <div id="work_area" style="width: 80%; margin: 0 auto;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Услуги</li>
+      </ol>
+    </nav>
+
+      <h1 style="margin-bottom: 20px;">Услуги</h1>
+      <h4 style="margin-bottom: 20px;">КСИ Фактор является ведущим поставщиком решений по ИТ-консалтингу в Казахстане</h4>
+    
+        <!-- s.html -->
+        <div class="news-list">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button bg-orange" style="background-color: #eb6624; color: #faf5f2; box-shadow: ;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        <strong>Управленческий консалтинг</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Разработка нормативов численности персонала и других нормативных документов</li>
+                            <li>Разработка положений о структурных подразделениях и должностных инструкций</li>
+                            <li>Проектирование организационной и финансовой структуры предприятия</li>
+                            <li>Исследование и моделирование в области экономики и человеческих ресурсов</li>
+                            <li>Разработка сбалансированной системы показателей предприятия</li>
+                            <li>Оценка эффективности и качества деятельности государственных органов Республики Казахстан</li>
+                            <li>Проведение социологических, психологических исследований</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" style="background-color: #eb6624 ; color: #faf5f2"  data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        <strong>Финансовый консалтинг</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Разработка ценовой политики предприятий, в том числе тарифной политики для субъектов естественных монополи</li>
+                            <li>Проведение финансовых, технических и других экспертиз субъектов естественных монополий</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="background-color: #eb6624 ; color: #faf5f2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        <strong>IT-консалтинг</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Решение задач мониторинга и анализа состояния сложных организационных систем</li>
+                            <li>Разработка системы производственного учета затрат и методики расчета себестоимости производства товаров и оказания услуг, в том числе транспортных услуг</li>
+                            <li>Анализ информационной безопасности</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="background-color: #eb6624 ; color: #faf5f2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        <strong>Разработка и внедрение информационных систем</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Разработка и внедрение автоматизированных информационных систем</li>
+                            <li>Решение и автоматизация финансово-экономических и статистических задач</li>
+                            <li>Разработка технических заданий на создание или развитие информационных систем</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="background-color: #eb6624 ; color: #faf5f2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                        <strong>Обучение</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Обучение применения методики оценки трудоемкости и стоимости разработки информационных систем</li>
+                            <li>Обучение пользователей</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+      <br>
+  </div>
+</section>
+
+{% comment %} <style>
+  .bg-orange {
+    background-color: #FFA500;
+  }
+</style> {% endcomment %}
+
+{% endblock %}
