@@ -29,7 +29,7 @@ def success(request, *args, **kwargs):
 
 
 @require_http_methods(["GET", "POST"])
-@ratelimit(key='user_or_ip', rate='10/m')
+# @ratelimit(key='user_or_ip', rate='10/m')
 def contacts(request, *args, **kwargs):
     if request.method == 'POST':
         form = PersonToContactForm(request.POST)
