@@ -1,6 +1,7 @@
 /* styles.css */
 
 
+
 button.accordion-button {
   background-color: #eb6624;
   color: #faf5f2;
@@ -12,24 +13,47 @@ button.accordion-button {
   border-color: black;
 }
 
-.carousel-controls {
-  position: relative;
-  margin-top: -40px; 
+
+.orange-btn {
+  background-color: orange;
 }
 
-
-.carousel-control-prev {
-  left: -10%;  /* Adjust this value */
+/* #partnerCarousel .carousel-controls {
+  position: relative; margin-top: -40px; 
 }
 
-.carousel-control-next {
-  right: -10%;  /* Adjust this value */
+#partnerCarousel .carousel-control-prev {
+  left: -10%;  
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgb(99, 98, 98);
+#partnerCarousel .carousel-control-next {
+  right: -10%; 
 }
+
+#partnerCarousel .carousel-control-prev-icon,
+#partnerCarousel .carousel-control-next-icon {
+  background-color: rgb(219, 87, 87);
+} */
+
+
+
+/* #bannerCarousel .carousel-control-prev,
+#bannerCarousel .carousel-control-next {
+    align-items: flex-end; bottom: 0; height: auto; width: 100%; justify-content: center;
+}
+
+#bannerCarousel .carousel-control-prev {
+    left: 0;
+}
+
+#bannerCarousel .carousel-control-next {
+    right: 0;
+}  */
+
+
+
+
+
 
 
 .col-md-2 {
