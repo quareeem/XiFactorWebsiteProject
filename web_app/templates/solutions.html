@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="container">
+    <div id="work_area" style="width: 80%; margin: 0 auto;">
+  
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Решения</li>
+        </ol>
+      </nav>
+  
+      <h1 style="margin-bottom: 20px;">Продукты</h1>
+      <div itemscope itemtype="http://schema.org/Organization">
+          Наш продукт 1
+          Наш продукт 2
+          Наш продукт 3
+      </div>
+  
+    </div>
+  </section>
+
+
+{% endblock %}

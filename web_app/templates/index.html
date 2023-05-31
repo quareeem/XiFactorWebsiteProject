@@ -4,43 +4,45 @@
 {% block content %}
 
 
-
-
-
 <div class="row g-5">
     <div class="col-md-10">
       <h2 class="pb-4 mb-4 border-bottom">TOO "КСИ-Фактор"</h2>
 
+      <!-- Banner -->
       <div id="bannerCarousel" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="card mb-3" style="background-color: rgb(66, 148, 136); height: 400px;">
+            <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-md-4">
-                        <div class="card-body d-flex flex-column h-100">
-                          <p class="card-text" style="margin: auto; font-size: 20px; color: white;">Предоставьте доступ к архивным документам в 3 клика!</p>
-                          <h5 class="card-title" style="margin: auto; font-size: 36px; color: white;">АрхивTech</h5>
-                          <a href="#" class="btn btn-primary mt-auto" style="background-color: orange; border-color: orange;">Подробнее</a>
-                        </div>
+                    <div class="col-md-8 order-md-2 order-1">
+                      <div class="img-container-banner">
+                        <img src="{% static 'img/banner_arxiv.png' %}" class="img-fluid rounded-start" alt="ereralt">
+                      </div>
                     </div>
-                    <div class="col-md-8">
-                        <img src="{% static 'img/banner_arxiv.png' %}" class="img-fluid rounded-start" alt="ereralt" style="height: 400px;">
+                    <div class="col-md-4 order-md-1 order-2">
+                        <div class="card-body d-flex flex-column h-100">
+                          <p class="card-text">Предоставьте доступ к архивным документам в 3 клика!</p>
+                          <h5 class="card-title">АрхивTech</h5>
+                          <a href="#" class="btn btn-primary mt-auto">Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>
           </div>
         
           <div class="carousel-item">
-            <div class="card mb-3" style="background-color: rgb(151, 213, 232); height: 400px;">
+            <div class="card mb-3">
               <div class="row g-0">
                   <div class="col-md-8">
-                    <img src="{% static 'img/banner_sebe_1.png' %}" class="img-fluid rounded-start" alt="ereralt" style="height: 400px;">
+                    <div class="img-container-banner">
+                      <img src="{% static 'img/banner_sebe_1.png' %}" class="img-fluid rounded-start" alt="ereralt" style="width: 70%">
+                    </div>
                   </div>
                   <div class="col-md-4">
                       <div class="card-body d-flex flex-column h-100">
-                        <p class="card-text" style="margin: auto; font-size: 20px; color: white;">Поддержка мониторинга и анализа факторов, определяющая себестоимость услуг</p>
-                        <h5 class="card-title" style="margin: auto; font-size: 36px; color: white;">ИС Себестоимость</h5>
-                        <a href="#" class="btn btn-primary mt-auto" style="background-color: orange; border-color: orange;">Подробнее</a>
+                        <p class="card-text">Поддержка мониторинга и анализа факторов, определяющая себестоимость услуг</p>
+                        <h5 class="card-title">ИС Себестоимость</h5>
+                        <a href="#" class="btn btn-primary mt-auto">Подробнее</a>
                       </div>
                   </div>
               </div>
@@ -48,7 +50,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="card mb-3" style="background-color: rgb(151, 213, 232); height: 400px;">
+            <div class="card mb-3">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="#" class="img-fluid rounded-start" alt="...">
@@ -72,12 +74,12 @@
         </div>
 
        
-          <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev" style="align-items: flex-end; bottom: 10%; height: auto; width: 10%; justify-content: center; left: 40%;">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgb(99, 98, 98);"></span>
+          <button class="carousel-control-prev custom-control" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next" style="align-items: flex-end; bottom: 10%; height: auto; width: 10%; justify-content: center; right: 40%;">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgb(99, 98, 98);"></span>
+          <button class="carousel-control-next custom-control" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         
@@ -91,11 +93,9 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="row row-equal" >
-
-                {% comment %} <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="card_item" style="padding-left: 5px; padding-right: 5px;"> {% endcomment %}
-                  <div class="row row-cols-1 row-cols-xl-4 row-cols-md-2 g-4">
-                    <div class="col mb-4">
-                      <div class="card border-light mb-3">
+                  <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-1 g-4">
+                    <div class="col mb-5">
+                      <div class="card border-light mb-3 idx-main-card">
                         <img width="75" height="75"  src="https://img.icons8.com/sf-ultralight/100/briefcase.png" alt="briefcase"/>
                         <div class="card-body">
                           <h5 class="card-title">Услуги</h5>
@@ -109,13 +109,13 @@
                           </ul>
                         </div>
                         <div class="card-body text-center">
-                          <a href="{% url 'services' %}" class="btn btn-secondary">Узнать больше</a>
+                          <a href="{% url 'services' %}" class="btn btn-learn-more">Узнать больше</a>
                         </div>
                       </div>
                     </div>
 
-                    <div class="col mb-4">
-                      <div class="card border-light mb-3">
+                    <div class="col mb-5">
+                      <div class="card border-light mb-3 idx-main-card">
                         <img width="75" height="75"  src="https://img.icons8.com/sf-ultralight/100/doughnut-chart--v4.png" alt="doughnut-chart--v4"/>
                         <div class="card-body">
                           <h5 class="card-title">Отрасли</h5>
@@ -131,13 +131,13 @@
                         </ul>
                         </div>
                         <div class="card-body text-center">
-                          <a href="{% url 'sector' %}" class="btn btn-secondary">Go somewhere</a>
+                          <a href="{% url 'sector' %}" class="btn btn-learn-more">Узнать больше</a>
                         </div>
                       </div>
                     </div>
 
-                    <div class="col mb-4">
-                      <div class="card border-light mb-3">
+                    <div class="col mb-5">
+                      <div class="card border-light mb-3 idx-main-card">
                         <img width="75" height="75"  src="https://img.icons8.com/sf-ultralight/100/documents.png" alt="documents"/>
                         <div class="card-body">
                           <h5 class="card-title">Статьи</h5>
@@ -151,44 +151,16 @@
                         </ul>
                         </div>
                         <div class="card-body text-center">
-                          <a href="#" class="btn btn-secondary">Go somewhere</a>
+                          <a href="#" class="btn btn-learn-more">Узнать больше</a>
                         </div>
                       </div>
                     </div>
-
-                    <div class="col mb-4">
-                      <div class="card border-light mb-3">
-                        <img width="75" height="75" src="https://img.icons8.com/sf-ultralight/100/planner.png" alt="planner"/>
-                        <div class="card-body">
-                          <h5 class="card-title">Проекты</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        
-                            <ul class="list-group list-group-flush flex-grow-1 text-center">
-                              <li class="list-group-item"><a href="portfolio.html">2017 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2016 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2015 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2014 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2013 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2012 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2011 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2010 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2009 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2008 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2007 год</a></li>
-                              <li class="list-group-item"><a href="portfolio.html">2006 год</a></li>
-                            </ul>
-                          </div>
-                        <div class="card-body text-center">
-                          <a href="{% url 'portfolio' %}" class="btn btn-secondary">Узнать больше</a>
-                        </div>
-                      </div>
-                    </div>
-
-
                   </div>
 
             </div>
           </div>
+
+
           <!-- divider -->
           <div class="row">
             <div class="col-lg-12">
@@ -197,6 +169,8 @@
             </div>
           </div>
           <!-- end divider -->
+
+
           <!-- Partners -->
           <h2 class="pb-4 mb-4 border-bottom">Наши партнеры</h2>
           <div id="partnerCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -238,11 +212,11 @@
             
             <!-- Separate the buttons from the carousel-inner div -->
             <div class="carousel-controls" >
-              <button class="carousel-control-prev btn-primary" type="button" data-bs-target="#partnerCarousel" data-bs-slide="prev" style="left: -2%; width: 2rem; height: 2rem; background-color: black; margin-top: 2%;" >
+              <button class="carousel-control-prev custom-btn" type="button" data-bs-target="#partnerCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next custom-btn" type="button" data-bs-target="#partnerCarousel" data-bs-slide="next" style="right: -2%; width: 2rem; height: 2rem; background-color: black; margin-top: 2%;">
+              <button class="carousel-control-next custom-btn" type="button" data-bs-target="#partnerCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -257,7 +231,7 @@
     </div>
 
     <div class="col-xl-2">
-      <div class="position-sticky" style="top: 2rem;">
+      <div class="position-sticky" style="top: 6rem;">
         <div class="p-4 mb-3 bg-body-tertiary rounded">
             <div class = "publication_title">
                 <h4 style="font-size: 20px; text-align: left;">Контактная информация</h4></div>
@@ -279,25 +253,7 @@
             </div>
          </div>
 
-        <div class="p-4">
-          <h4 class="fst-italic">Archives</h4>
-          <ol class="list-unstyled mb-0">
-            <li><a href="#">March 2021</a></li>
-            <li><a href="#">February 2021</a></li>
-            <li><a href="#">January 2021</a></li>
-            <li><a href="#">December 2020</a></li>
-            <li><a href="#">November 2020</a></li>
-            <li><a href="#">October 2020</a></li>
-            <li><a href="#">September 2020</a></li>
-            <li><a href="#">August 2020</a></li>
-            <li><a href="#">July 2020</a></li>
-            <li><a href="#">June 2020</a></li>
-            <li><a href="#">May 2020</a></li>
-            <li><a href="#">April 2020</a></li>
-          </ol>
-        </div>
-
-        <div class="p-4">
+         <div class="p-4">
           <h4 class="fst-italic">Elsewhere</h4>
           <ol class="list-unstyled">
             <li><a href="#">GitHub</a></li>
@@ -305,6 +261,8 @@
             <li><a href="#">Facebook</a></li>
           </ol>
         </div>
+
+
       </div>
     </div>
   </div>

@@ -1,5 +1,189 @@
 /* styles.css */
 
+/* index.html */
+
+
+
+
+/* Баннер */
+
+.carousel.slide .carousel-item .card.mb-3 {
+  height: 420px;
+}
+
+.carousel.slide .carousel-item:nth-child(1) .card.mb-3 {
+  background-color: rgb(66, 148, 136);
+}
+
+.carousel.slide .carousel-item:nth-child(2) .card.mb-3,
+.carousel.slide .carousel-item:nth-child(3) .card.mb-3 {
+  background-color: rgb(151, 213, 232);
+}
+
+/* .carousel.slide .carousel-item .card-body {
+  padding-bottom: 400px;
+} */
+
+
+.carousel.slide .carousel-item .card-body .card-text,
+.carousel.slide .carousel-item .card-body .card-title {
+  margin: auto;
+  color: white;
+}
+
+
+.carousel.slide .carousel-item .card-body .card-text {
+  font-size: 20px;
+}
+
+.carousel.slide .carousel-item .card-body .card-title {
+  font-size: 36px;
+}
+
+.carousel.slide .carousel-item .btn.btn-primary {
+  background-color: orange;
+  border-color: orange;
+}
+
+@media (max-width: 768px) {
+  .carousel.slide .carousel-item {
+    padding-bottom: 5em;
+  }
+
+  .carousel.slide .carousel-item .card-body .card-text {
+    font-size: 16px;
+  }
+
+  .carousel.slide .carousel-item .card-body .card-title {
+    font-size: 24px;
+  }
+
+  .carousel.slide .carousel-item .btn.btn-primary {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel.slide .carousel-item {
+    padding-bottom: 5em;
+  }
+
+  .carousel.slide .carousel-item .card-body .card-text {
+    font-size: 14px;
+  }
+
+  .carousel.slide .carousel-item .card-body .card-title {
+    font-size: 18px;
+  }
+
+  .carousel.slide .carousel-item .btn.btn-primary {
+    font-size: 14px;
+  }
+
+
+}
+
+
+/* .carousel.slide .carousel-item .img-fluid.rounded-start {
+  height: 400px;
+} */
+
+.img-container-banner {
+  position: relative;
+  width: 100%;
+  padding-bottom: 54.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.img-container-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel.slide .carousel-item .card-body .text-body-secondary {
+  color: #6c757d;
+}
+
+.carousel.slide .custom-control {
+  align-items: flex-end;
+  bottom: 10%;
+  height: auto;
+  width: 10%;
+  justify-content: center;
+}
+
+.carousel.slide .carousel-control-prev.custom-control {
+  left: 40%;
+}
+
+.carousel.slide .carousel-control-next.custom-control {
+  right: 40%;
+}
+
+.carousel.slide .custom-icon {
+  background-color: rgb(99, 98, 98);
+}
+
+
+/* Партнеры */
+#partnerCarousel .carousel-inner .carousel-item .col-3 img {
+  border: 1px solid #d2d2d2;
+  width: 80px;
+  height: 80px;
+}
+
+#partnerCarousel .carousel-inner .carousel-item .col-3 img:nth-child(1),
+#partnerCarousel .carousel-inner .carousel-item .col-3 img:nth-child(3) {
+  width: 50px;
+}
+
+.carousel-controls .carousel-control-prev.custom-btn,
+.carousel-controls .carousel-control-next.custom-btn {
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    margin-top: 2%;
+    position: absolute;
+}
+
+.carousel-controls .carousel-control-prev.custom-btn {
+    left: -2%;
+}
+
+.carousel-controls .carousel-control-next.custom-btn {
+    right: -2%;
+}
+
+
+
+/* Content (4 cards) */
+.idx-main-card {
+  border-color: lightgray;
+}
+
+.idx-main-card img {
+  width: 75px;
+  height: 75px;
+}
+
+.idx-main-card .btn-learn-more {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+
+
+
+
+
+
+
+/* header.hmtl */
+
 
 
 button.accordion-button {
@@ -18,51 +202,15 @@ button.accordion-button {
   background-color: orange;
 }
 
-/* #partnerCarousel .carousel-controls {
-  position: relative; margin-top: -40px; 
-}
 
-#partnerCarousel .carousel-control-prev {
-  left: -10%;  
-}
-
-#partnerCarousel .carousel-control-next {
-  right: -10%; 
-}
-
-#partnerCarousel .carousel-control-prev-icon,
-#partnerCarousel .carousel-control-next-icon {
-  background-color: rgb(219, 87, 87);
+/* 
+.col-md-2 {
+  font-size: 14px; 
 } */
 
-
-
-/* #bannerCarousel .carousel-control-prev,
-#bannerCarousel .carousel-control-next {
-    align-items: flex-end; bottom: 0; height: auto; width: 100%; justify-content: center;
-}
-
-#bannerCarousel .carousel-control-prev {
-    left: 0;
-}
-
-#bannerCarousel .carousel-control-next {
-    right: 0;
-}  */
-
-
-
-
-
-
-
-.col-md-2 {
-  font-size: 14px; /* or any other font size you prefer */
-}
-
-.feedback_address {
-  font-size: 14px; /* or any other font size you prefer */
-}
+/* .feedback_address {
+  font-size: 14px;
+} */
 
 
 .news-list a {
@@ -84,10 +232,10 @@ button.accordion-button {
 }
 
 
-.card-text,
+/* .card-text,
 .list-group-item {
   font-size: 14px;
-}
+} */
 
 .card {
   display: flex;
@@ -117,5 +265,72 @@ body {
 main {
   flex: 1;
   margin-bottom: 50px; /* Adjust the value as per your desired spacing */
+}
+
+
+
+
+/* Header - Search bar  */
+.search {
+  position: relative;
+  max-width: 500px;
+  margin: 0px 10px;
+  background-color: none;
+  border: 1px solid gray;
+
+}
+
+.search input[type="search"] {
+  width: 100px;
+  height: 40px;
+  padding: 20px 10px; 
+  border-radius: .25rem; /* Bootstrap's border-radius */
+  transition: all .5s;
+  
+}
+
+.search input[type="search"]:focus {
+  outline: none;
+  width: 420px;
+}
+
+.search .search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 38px;
+  height: 38px; 
+}
+
+.search .search-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #0f2d28;
+  border-radius: 50%;
+  position: relative;
+  transition: all .5s;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search .search-icon:before {
+  content: "";
+  position: absolute;
+  background-color: #242917;
+  transition: all .5s;
+}
+
+.search .search-icon:before {
+  width: 2px;
+  height: 8px;
+  top: 8px;
+  left: 11px;
+  transform: rotate(-45deg);
 }
 

@@ -1,5 +1,5 @@
 {% load static %}
-<header>
+
   <style>
     @media (max-width: 992px) {
       #navbarSupportedContent {
@@ -7,12 +7,10 @@
       }
     }
   </style>
-</header>
 
 
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" style="height: 80px;">
   <div class="container-fluid">
-    
     <div class="d-flex justify-content-end align-items-center">
       <a class="navbar-brand mb-0 h1 me-auto" href="{% url 'home' %}">
         <img src="{% static 'img/logo_main.png' %}" alt="Logo" width="185" height="50" class="d-inline-block align-text-top ms-4">
@@ -27,44 +25,33 @@
           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">О нас</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="{% url 'services' %}">Услуги</a>
         </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Отрасли</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Разработка информационных систем</a></li>
-            <li><a class="dropdown-item" href="#">Макроэкономические исследования</a></li>
-            <li><a class="dropdown-item" href="#">Микроэкономические исследования</a></li>
-            <li><a class="dropdown-item" href="#">Отраслевые исследования</a></li>
-            <li><a class="dropdown-item" href="#">Исследования в области нормирования факторов производства</a></li>
-            <li><a class="dropdown-item" href="#">Исследования социальных проблем</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'sector' %}">Подробнее...</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'solutions' %}">Решения</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Проекты</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">За 2023 год</a></li>
-            <li><a class="dropdown-item" href="#">За 2022 год</a></li>
-            <li><a class="dropdown-item" href="#">За 2021 год</a></li>
-            <li><a class="dropdown-item" href="#">За 2020 год</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'portfolio' %}">Подробнее</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'research' %}">Научные исследования</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'portfolio' %}">Проекты</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
         </li>
-        <li class="nav-item">
+        {% comment %} <li class="nav-item">
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </li> {% endcomment %}
+
+        <li class="nav-item">
+          <form class="search d-flex">
+            <input class="search-box form-control me-10" type="search" aria-label="Search" style="margin-right: 2.5rem;">
+            <span class="search-button" type="submit">
+              <button class="search-icon" type="submit"></button>
+            </span>
           </form>
         </li>
       </ul>
@@ -130,3 +117,15 @@
     </ul>
   </div>
 </div> 
+
+
+<script>
+  $('.search-button').click(function(){
+    $(this).siblings('input[type="search"]').focus();
+  });
+
+  $('.search-box').on('blur', function(){
+    $(this).css('width', '100px');
+  });
+  
+</script>

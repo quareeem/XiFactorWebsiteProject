@@ -24,6 +24,12 @@ def sector(request, *args, **kwargs):
 def portfolio(request, *args, **kwargs):
     return render(request, 'portfolio.html')
 
+def solutions(request, *args, **kwargs):
+    return render(request, 'solutions.html')
+
+def research(request, *args, **kwargs):
+    return render(request, 'research.html')
+
 def success(request, *args, **kwargs):
     return render(request, 'success.html')
 
