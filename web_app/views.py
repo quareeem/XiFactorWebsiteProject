@@ -2,6 +2,8 @@ from django.views.decorators.http import require_http_methods
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django_ratelimit.decorators import ratelimit
+from django.utils.translation import gettext as _
+from django.utils.translation import get_language, activate, gettext, get_language_info
 
 from .forms import PersonToContactForm
 
@@ -27,8 +29,15 @@ def portfolio(request, *args, **kwargs):
 def solutions(request, *args, **kwargs):
     return render(request, 'solutions.html')
 
+def solutions_arxiv(request, *args, **kwargs):
+    return render(request, 'solutions_arxiv.html')
+
+def solutions_sebes(request, *args, **kwargs):
+    return render(request, 'solutions_sebes.html')
+
 def research(request, *args, **kwargs):
-    return render(request, 'research.html')
+    trans_str = translate(language='ru')
+    return render(request, 'research.html', {'trans_str': trans_str})
 
 def success(request, *args, **kwargs):
     return render(request, 'success.html')
@@ -48,3 +57,16 @@ def contacts(request, *args, **kwargs):
     else:
         messages.get_messages(request).used = True
     return render(request, 'contacts.html')
+
+
+def translate(language):
+    current_lang = get_language()
+    try:
+        print(get_language_info(get_language()))
+        activate(language)
+        print(get_language_info(get_language()))
+        text = _('Hello')
+        print('- - SUCCESSFULL - -')
+    finally:
+        activate(current_lang)
+    return text

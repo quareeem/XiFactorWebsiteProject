@@ -4,8 +4,7 @@
 {% block content %}
 
 <section class="container">
-  <div id="work_area" style="width: 80%; margin: 0 auto;">
-
+  <div id="work_area">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
@@ -14,17 +13,102 @@
     </nav>
 
     <h1 style="margin-bottom: 20px;">Научные исследования</h1>
-    <div itemscope itemtype="http://schema.org/Organization">
-        Научные исследования
-        Научные исследования
-        Научные исследования
-        Научные исследования
-        Научные исследования
-        Научные исследования
+    <h4 style="margin-bottom: 20px;">Одним из направлений деятельности нашей компании является проведение научных исследований в следующих областях:</h4>
+
+    <div class="news-list">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button bg-orange" style="background-color: #eb6624; color: #faf5f2; box-shadow: ;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        <strong>Экономика</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Факторно-балансовый метод расчета себестоимости услуг</li>
+                            <li>Тарифная политика предприятий монопольного и конкурентного рынков</li>
+                            <li>Макроэкономические исследования</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" style="background-color: #eb6624 ; color: #faf5f2"  data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        <strong>Математика</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Четырехмерная математика</li>
+                            <li>Распределение простых чисел</li>
+                            <li>Математическое моделирование физических процессов</li>
+                            <li>Математическое моделирование социально-экономических процессов</li>
+                            <li>Теория фильтрации</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="background-color: #eb6624 ; color: #faf5f2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        <strong>Информатика</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Построение информационной модели предметной области</li>
+                            <li>Архитектура информационных систем</li>
+                            <li>Алгоритмы оценки</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="background-color: #eb6624 ; color: #faf5f2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        <strong>Прикладная статистика</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Регрессионный и корреляционный анализ</li>
+                            <li>Байесовская статистика</li>
+                            <li>Планирование экспериментов</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="background-color: #eb6624 ; color: #faf5f2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        <strong>Публикации</strong>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Монографии</li>
+                            <li>Научные статьи</li>
+                            <li>Публикации в СМИ</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+    </div>
     </div>
 
+
   </div>
+
 </section>
-
-
 {% endblock %}

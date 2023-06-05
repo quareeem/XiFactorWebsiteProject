@@ -8,7 +8,7 @@
     }
   </style>
 
-
+{% load i18n %}
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" style="height: 80px;">
   <div class="container-fluid">
     <div class="d-flex justify-content-end align-items-center">
@@ -39,15 +39,30 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
         </li>
-        {% comment %} <li class="nav-item">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </li> {% endcomment %}
+        <li class="nav-item dropdown">
+          {% get_current_language as LANGUAGE_CODE %}
+          {% get_available_languages as LANGUAGES %}
+          {% get_language_info_list for LANGUAGES as langs %}
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% for lang in langs %}
+            <li>
+              <a class="dropdown-item" href="/{{ lang.code }}/{{ request.get_full_path|slice:'4:' }}">
+                <option value="{{ lang.code }}"{% if lang.code == LANGUAGE_CODE %}selected{% endif %}>
+                {{ lang.name_local }} ({{ lang.code }})
+                </option>
+              </a>
+            </li>
+
+            {% endfor %}
+          </ul>
+        </li>
+        
 
         <li class="nav-item">
-          <form class="search d-flex">
+          <form class="search d-flex rounded">
             <input class="search-box form-control me-10" type="search" aria-label="Search" style="margin-right: 2.5rem;">
             <span class="search-button" type="submit">
               <button class="search-icon" type="submit"></button>

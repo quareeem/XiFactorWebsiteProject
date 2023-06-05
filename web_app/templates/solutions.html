@@ -4,7 +4,7 @@
 {% block content %}
 
 <section class="container">
-    <div id="work_area" style="width: 80%; margin: 0 auto;">
+    <div id="work_area">
   
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -12,12 +12,45 @@
           <li class="breadcrumb-item active" aria-current="page">Решения</li>
         </ol>
       </nav>
-  
-      <h1 style="margin-bottom: 20px;">Продукты</h1>
-      <div itemscope itemtype="http://schema.org/Organization">
-          Наш продукт 1
-          Наш продукт 2
-          Наш продукт 3
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'img/solution-arxiv-1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">АрхивTech</h5>
+              <p class="card-text">Предоставьте доступ к архивным документам в 3 клика!</p>
+            </div>
+            <div class="card-footer solution-card-footer">
+              <a href="{% url 'solutions_arxiv' %}" class="btn orange-btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'img/solution-sebes-1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ИС Себестоимость</h5>
+              <p class="card-text">Поддержка мониторинга и анализа факторов, определяющая себестоимость услуг</p>
+            </div>
+            <div class="card-footer solution-card-footer">
+              <a href="{% url 'solutions_sebes' %}" class="btn orange-btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'img/green-gradient.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer solution-card-footer">
+              <a href="#" class="btn orange-btn">Подробнее</a>
+
+            </div>
+          </div>
+        </div>
       </div>
   
     </div>

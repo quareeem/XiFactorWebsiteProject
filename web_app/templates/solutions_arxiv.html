@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="container">
+    <div id="work_area">
+  
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'solutions' %}">Решения</a></li>
+          <li class="breadcrumb-item active" aria-current="page">АрхивTech</li>
+        </ol>
+      </nav>
+
+
+      ARXIV CONTENT
+    
+    </div>
+</section>
+
+
+{% endblock %}
