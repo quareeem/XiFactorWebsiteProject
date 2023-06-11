@@ -22,22 +22,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">{% translate "Home" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'services' %}">Услуги</a>
+          <a class="nav-link" href="{% url 'services' %}">{% translate "Services" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'solutions' %}">Решения</a>
+          <a class="nav-link" href="{% url 'solutions' %}">{% translate "Solutions" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'research' %}">Научные исследования</a>
+          <a class="nav-link" href="{% url 'research' %}">{% translate "Research" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'portfolio' %}">Проекты</a>
+          <a class="nav-link" href="{% url 'portfolio' %}">{% translate "Projects" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+          <a class="nav-link" href="{% url 'contacts' %}">{% translate "Contacts" %}</a>
         </li>
         <li class="nav-item dropdown">
           {% get_current_language as LANGUAGE_CODE %}

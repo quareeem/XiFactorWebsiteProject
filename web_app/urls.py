@@ -1,5 +1,6 @@
 from . import views
 from django.urls import path
+from django.conf.locale import LANG_INFO
 
 urlpatterns = [
     path('', views.home, name="home"),

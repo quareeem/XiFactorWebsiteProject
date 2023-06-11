@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-02 09:01+0000\n"
+"POT-Creation-Date: 2023-06-06 06:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,40 +16,38 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: XiFactorWebsiteProject/settings.py:156
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+#: XiFactorWebsiteProject/settings.py:165
 msgid "English"
 msgstr ""
 
-#: XiFactorWebsiteProject/settings.py:157
+#: XiFactorWebsiteProject/settings.py:166
 msgid "Russian"
 msgstr ""
 
-#: web_app/templates/research.html:21 web_app/views.py:62
-msgid "Hello"
-msgstr "Привет"
+#: XiFactorWebsiteProject/settings.py:167
+msgid "Kazakh"
+msgstr ""
 
-#: web_app/templates/research.html:22 web_app/templates/research.html:27
-msgid "hello"
-msgstr "привет"
+#: web_app/views.py:68
+msgid "Hello"
+msgstr "Salem"
 
 # - - HEADER - -
 msgid "Home"
-msgstr "Главная"
+msgstr "Басты бет"
 
 msgid "Services"
-msgstr "Услуги"
+msgstr "Қызметтер"
 
 msgid "Solutions"
-msgstr "Решения"
+msgstr "Шешімдер"
 
 msgid "Research"
-msgstr "Исследования"
+msgstr "Зерттеулер"
 
 msgid "Projects"
-msgstr "Проекты"
+msgstr "Проекттер"
 
 msgid "Contacts"
-msgstr "Контакты"
+msgstr "Байланыстар"

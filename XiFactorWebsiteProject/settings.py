@@ -85,8 +85,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'postgres',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'mysecretpassword',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # }
 }
+
 
 
 
@@ -119,6 +128,16 @@ redis_instance = redis.from_url(redis_url)
 # Set up the rate-limiting cache prefix
 RATE_LIMIT_CACHE_PREFIX = "ratelimit:"
 RATELIMIT_USE_CACHE = 'cache-for-ratelimiting'
+
+
+# Email backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '222145@astanait.edu.kz'  # Admin email address
+EMAIL_HOST_PASSWORD = 'HPbpo1df3x882'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = '222145@astanait.edu.kz'  # Sender email address
 
 
 # Password validation
@@ -155,6 +174,7 @@ USE_TZ = True
 LANGUAGES = [
     ("en", _("English")),
     ("ru", _("Russian")),
+    ("kk", _("Kazakh")),
 ]
 
 LOCALE_PATHS = (

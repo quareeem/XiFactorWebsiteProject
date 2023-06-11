@@ -5,6 +5,8 @@ from django_ratelimit.decorators import ratelimit
 from django.utils.translation import gettext as _
 from django.utils.translation import get_language, activate, gettext, get_language_info
 
+from web_app.utils import send_contact_notification_email
+
 from .forms import PersonToContactForm
 
 
@@ -50,6 +52,10 @@ def contacts(request, *args, **kwargs):
         form = PersonToContactForm(request.POST)
         if form.is_valid():
             form.save()
+            try:
+                send_contact_notification_email(name=request.POST['name'], email=request.POST['email'])
+            except:
+                raise EOFError('SOME PROBLEM SNEIDNG EMAL')
             messages.success(request, 'Contact added successfully!')
             return redirect('success')
         else:
