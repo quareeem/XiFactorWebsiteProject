@@ -9,11 +9,11 @@
   </style>
 
 {% load i18n %}
-<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" style="height: 80px;">
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" >
   <div class="container-fluid">
     <div class="d-flex justify-content-end align-items-center">
       <a class="navbar-brand mb-0 h1 me-auto" href="{% url 'home' %}">
-        <img src="{% static 'img/logo_main.png' %}" alt="Logo" width="185" height="50" class="d-inline-block align-text-top ms-4">
+        <img id="logo" src="{% static 'img/logo_main_1.png' %}" alt="Logo" class="d-inline-block align-text-top ms-4">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
