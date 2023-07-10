@@ -68,9 +68,7 @@ def contacts(request, *args, **kwargs):
 def translate(language):
     current_lang = get_language()
     try:
-        print(get_language_info(get_language()))
         activate(language)
-        print(get_language_info(get_language()))
         text = _('Hello')
         print('- - SUCCESSFULL - -')
     finally:

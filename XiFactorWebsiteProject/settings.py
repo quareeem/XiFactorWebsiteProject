@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-import redis
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+# import redis
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -99,35 +99,35 @@ DATABASES = {
 
 
 
-# Redis cache settings
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ.get("REDIS_URL", "redis://localhost:6379/1"),
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        },
-    },
-    "cache-for-ratelimiting": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ.get("REDIS_URL", "redis://localhost:6379/1"),
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        },
-    },
-}
+# # Redis cache settings
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": os.environ.get("REDIS_URL", "redis://localhost:6379/1"),
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         },
+#     },
+#     "cache-for-ratelimiting": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": os.environ.get("REDIS_URL", "redis://localhost:6379/1"),
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         },
+#     },
+# }
 
-# Use Redis as the session backend
-SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-SESSION_CACHE_ALIAS = "default"
+# # Use Redis as the session backend
+# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# SESSION_CACHE_ALIAS = "default"
 
-# Set up the Redis connection
-redis_url = os.environ.get("REDIS_URL", "redis://localhost:6379/1")
-redis_instance = redis.from_url(redis_url)
+# # Set up the Redis connection
+# redis_url = os.environ.get("REDIS_URL", "redis://localhost:6379/1")
+# redis_instance = redis.from_url(redis_url)
 
-# Set up the rate-limiting cache prefix
-RATE_LIMIT_CACHE_PREFIX = "ratelimit:"
-RATELIMIT_USE_CACHE = 'cache-for-ratelimiting'
+# # Set up the rate-limiting cache prefix
+# RATE_LIMIT_CACHE_PREFIX = "ratelimit:"
+# RATELIMIT_USE_CACHE = 'cache-for-ratelimiting'
 
 
 # Email backend

@@ -32,6 +32,13 @@ class Position(models.Model):
     name_en = models.CharField(max_length=200)
 
 
+class FileStorage(models.Model):
+    parent = models.CharField(max_length=200)
+    path = models.CharField(max_length=200)
+    origin_name = models.CharField(max_length=200)
+    file_type = models.CharField(max_length=100)
+
+
 class EmployeePosition(models.Model):
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
     position = models.ForeignKey(Position, on_delete=models.CASCADE)
@@ -111,13 +118,13 @@ class Project(models.Model):
 class ServiceArtifact(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
     artifact_type = models.CharField(max_length=200)
-    # file_storage = models.ForeignKey(FileStorage, verbose_name=_(""), on_delete=models.CASCADE)
+    file_storage = models.ForeignKey(FileStorage, on_delete=models.CASCADE)
 
 
 class SolutionArtifact(models.Model):
     solution = models.ForeignKey(Solution, on_delete=models.CASCADE)
     artifact_type = models.CharField(max_length=200)
-    # file_storage = models.ForeignKey(FileStorage, verbose_name=_(""), on_delete=models.CASCADE)
+    file_storage = models.ForeignKey(FileStorage, on_delete=models.CASCADE)
 
 
 class ResearchPublication(models.Model):
@@ -132,13 +139,13 @@ class PublicationAuthor(models.Model):
 
 class PublicationFile(models.Model):
     publication = models.ForeignKey(Publication, on_delete=models.CASCADE)
-    # file_storage = models.ForeignKey(FileStorage, verbose_name=_(""), on_delete=models.CASCADE)
+    file_storage = models.ForeignKey(FileStorage, on_delete=models.CASCADE)
 
 
 class ProjectArtifact(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     artifact_type = models.CharField(max_length=200)
-    # file_storage = models.ForeignKey(FileStorage, verbose_name=_(""), on_delete=models.CASCADE)
+    file_storage = models.ForeignKey(FileStorage, on_delete=models.CASCADE)
 
 
 class ProjectSolution(models.Model):
